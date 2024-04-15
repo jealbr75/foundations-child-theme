@@ -1,0 +1,48 @@
+/*
+ Theme Name:   Foundations Theme
+ Theme URI:    https://jeffbrigman.com/foundations
+ Description:  Custom theme to extend Bricks theme capability
+ Author:       Jeff Brigman
+ Author URI:   https://jeffbrigman.com
+ Template:     bricks
+ Version:      1.4
+ Text Domain:  jeffbrigman
+*/
+
+
+/**** Start Accessibility Styling ****/
+
+body.bricks-is-frontend :focus:not(:focus-visible) { 
+  outline: none!important;
+  box-shadow: none!important;
+}
+
+body.bricks-is-frontend :focus-visible {
+  outline-style: solid!important;
+  outline-color: hsl(38.1, 30.2%, 33.7%)!important;
+  outline-width: .2rem!important;
+  outline-offset: .25rem!important;
+}
+
+.clickable-parent:not(a) > a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	cursor: pointer!important;
+	display: flex;
+}
+
+.clickable-parent:not(a) {
+	position: static;
+}
+
+.clickable-parent:not(a) a {
+	position: static;
+}
+
+.focus-parent:focus-within {
+	outline: .2rem solid hsla(50, 100%, 50%, 0.5);
+	outline-offset: .25rem);
+}
+
+/**** End Accessibility Styling ****/
